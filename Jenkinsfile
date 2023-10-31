@@ -26,8 +26,8 @@ pipeline {
         stage('Deploy to Kubernetes') {
             steps {
                 script {
-                    def mysqlPodName = 'mysql-pod'
-                    def phpAdminPodName = 'phpadmin-pod'
+                    def mysqlPodName = 'mysql-pod2'
+                    def phpAdminPodName = 'phpadmin-pod2'
 
                     bat "kubectl create cm db-config2 --from-literal=MYSQL_DATABASE=sqldb"
                     bat "kubectl create secret generic db-secret2 --from-literal=MYSQL_ROOT_PASSWORD=password"
