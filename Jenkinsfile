@@ -43,7 +43,7 @@ pipeline {
 
                     // Wait for the MySQL and PHPMyAdmin pods to be ready (you may need to adjust the timeouts)
                     bat "kubectl wait --for=condition=ready pod/$mysqlPodName --timeout=300s"
-                    bat "kubectl wait --for=condition=ready pod/$phpAdminPodName --timeout=300s"
+                    //bat "kubectl wait --for=condition=ready pod/$phpAdminPodName --timeout=300s"
                 }
             }
         }
